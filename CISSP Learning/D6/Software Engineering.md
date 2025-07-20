@@ -77,7 +77,7 @@ Hypervisor 是 VM 管家 by NIST
 Mobile code 是 NIST強調的風險重點
 
 ## ==Code Repository and IDE==
-
+*page.434*
 Distributed
 - ==Git==
 - Mercurial
@@ -87,5 +87,31 @@ Client/ Server
 Proprietary
 - Microsoft TFS
 - Bitbucket
+
+## Object-Oriented Programming
+*page.437*
+
+Class & Object
+- Attributes --> Properties
+- Operations --> Methods
+
+OOP Features
+- 封裝(Encapsulation):
+	- 為了避免外部隨意存取Class中的Properties & Methods而實施存取限制的動作
+- 繼承(Inheritance):
+	- 子類別可繼承父類別的屬性和方法
+- 多型(Polymorphism):
+	- 不同類別的物件可以通過相同的接口進行操作，而表現出不同的行為(即方法的具體實現)。兩種做法:Overload & Override
+
+Principles:
+- 高聚合(High cohesion):
+	- 盡量是相關的Properties & Methods才放到同一個Class中
+- 低耦合(Low coupling):：
+	- 盡量不要用別人的程式，即便使用也要避免將程式模組互相綁得太緊，當某個模組因某些原因不可用而需要更換時，可以降低更換模組的影響
+
+---
+## Testing Phase
+
+Code Module <-- pair with --> Unit Test
 
 
