@@ -1,4 +1,4 @@
-# Nick-s-Obsidian-Note
-For my personal learning 
+# Nick_CISSP_Learning_Note
+For my personal CISSP learning 
 
 Mentored by Wuson
