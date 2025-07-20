@@ -1,7 +1,7 @@
 # 忽略所有檔案和資料夾
 *
 
-# 但追蹤 CISSP Learning 資料夾
+# 追蹤 CISSP Learning 資料夾
 !CISSP Learning/
 !CISSP Learning/**
 
