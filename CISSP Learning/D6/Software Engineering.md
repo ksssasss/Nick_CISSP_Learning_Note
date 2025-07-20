@@ -167,4 +167,25 @@ def test_add():
 Positive vs Negative Testing
 - Valid vs invalid inputs
 
-let's test the git
+### Software Development Approaches
+*page.388*
+
+## Analysis Phase
+*page.397*
+
+### Requirements Document
+
+- User Requirements Specification (URS)
+- Use Case
+	- Use Case Text
+	- Use Case Diagram
+- User Story
+
+User Story Example
+```
+As <role>
+I want <goal>
+So that <benefit>
+
+Acceptance criteria:
+```
