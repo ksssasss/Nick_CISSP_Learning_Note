@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"id":"researchBackground","type":"text","text":"## 研究背景\n- RG定義：連接家庭與網際網路的橋樑設備\n- 功能：數據機調變解調 + 計算功能\n- 普及率：全球約80%家庭\n- 數量：全球至少1億台\n- 分布：北美、巴西、中國、俄羅斯、澳洲、德國","x":-600,"y":-350,"width":450,"height":300},
+		{"id":"researchMotivation","type":"text","text":"## 研究動機\n- 設備普及率高，是攻擊者的理想目標\n- 前人研究發現：\n  - Sver(英國)：管理機制問題\n  - Jesser和C(荷蘭)：管理界面對外開放\n  - CRY(美國)：遠端管理設定錯誤","x":-600,"y":0,"width":450,"height":300},
+		{"id":"methodology","type":"text","text":"## 研究方法\n- 從使用者角度出發\n- 設備拆解分析\n- 研究基礎建設架構\n- 研究9家不同廠商","x":-600,"y":350,"width":450,"height":300},
+		{"id":"case1","type":"text","text":"## Case 1: Broadcom Gen 3\n- 特點：\n  - 安全開機與信任根\n  - 全磁碟加密(FDE)\n  - 802.1x認證\n- 研究過程：\n  - 中國論壇找到韌體\n  - 發現私有協定漏洞\n  - 可提取FDE和802.1x金鑰","x":0,"y":-350,"width":450,"height":300},
+		{"id":"case2","type":"text","text":"## Case 2: iptables與服務\n- 發現：\n  - 特定IP可WAN訪問管理\n  - 僅阻擋ICMP\n- 攻擊路徑：\n  - LAN轉WAN\n  - DVR RCE漏洞\n  - 影響400萬台","x":0,"y":0,"width":450,"height":300},
+		{"id":"sdkIssues","type":"text","text":"## SDK問題\n- 發現：\n  - 隱身模式問題\n  - CMS CLI命令注入\n- 影響：\n  - 多廠商使用相同SDK\n  - 大規模影響","x":0,"y":350,"width":450,"height":300},
+		{"id":"recommendations","type":"text","text":"## 安全建議\n- 終端使用者：\n  - RG後方防火牆\n  - 封鎖私有地址\n  - 現代模式設定\n- 電信營運商：\n  - 異常流量檢測\n  - 完整性檢查\n  - 流量模式監控","x":600,"y":-350,"width":450,"height":300},
+		{"id":"oemRecommendations","type":"text","text":"## OEM建議\n- 安全標準：\n  - 硬體安全開機\n  - TrustZone正確使用\n  - FIPS 140-2\n  - ISO/IEC 62443\n  - EN 303 645\n- 安全開發流程","x":600,"y":0,"width":450,"height":300},
+		{"id":"socRecommendations","type":"text","text":"## SoC供應商建議\n- 清晰使用說明\n- 安全編碼實踐\n- 程式碼穩健性","x":600,"y":350,"width":450,"height":300}
+	],
+	"edges":[
+		{"fromNode":"sdkIssues","fromSide":"right","toNode":"socRecommendations","toSide":"left"}
+	]
+}

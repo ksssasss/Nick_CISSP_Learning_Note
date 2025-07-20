@@ -1,0 +1,44 @@
+# Obsidian 系統檔案
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspace
+.obsidian/workspace-mobile
+
+# macOS 系統檔案
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 暫存檔案
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# 音訊檔案（如果不想追蹤）
+*.m4a
+*.mp3
+*.wav
+*.aac
+
+# 大型檔案
+*.zip
+*.tar.gz
+*.rar
+
+# Python 虛擬環境
+.venv/
+venv/
+env/
+
+# 日誌檔案
+*.log
+
+# 個人敏感資訊（可選）
+# 如果有些檔案包含敏感資訊，可以加入這裡
+# sensitive-notes.md 

@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"actorProfile","type":"text","text":"## Actor Profile\n- **Name:** SneakyChef\n- **Type:** Asian APT (State sponsor unconfirmed)\n- **Active Since:** Aug 2023+\n- **Motive:** Espionage, Data Theft (Credentials, Intel Info)\n- **Targets:** Gov/Private (India, Asia - e.g., PK, IN, AO)\n\n[[SneakyChef_Campaign_Summary#Actor Profile|EN Summary]] | [[SneakyChef_Campaign_Summary_zh-TW#行為者檔案 (Actor Profile)|中文總結]]","x":-600,"y":-350,"width":450,"height":300},
+		{"id":"intrusion1","type":"text","text":"### Chain 1: SugarGhost (LNK -> JS -> Side-Load)\n1.  LNK -> JS\n2.  JS Drops: Decoy, BAT, `Mocks.DLL`, `Dplay.org` (Encrypted SG)\n3.  JS -> BAT\n4.  BAT -> `Mocks.DLL` (Side-Load)\n5.  `Mocks.DLL` decrypts & injects SugarGhost (-> `rundll32.exe`?)\n6.  C2 Comms\n\n[[SneakyChef_Campaign_Summary#Intrusion Chain 1: SugarGhost (LNK -> JS -> DLL Side-Load)|EN Summary]] | [[SneakyChef_Campaign_Summary_zh-TW#入侵鏈 1: SugarGhost (LNK -> JS -> DLL Side-Load)|中文總結]]","x":0,"y":-610,"width":450,"height":380,"color":"1"}
+	],
+	"edges":[]
+}
