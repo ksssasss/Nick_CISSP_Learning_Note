@@ -189,3 +189,24 @@ So that <benefit>
 
 Acceptance criteria:
 ```
+
+## Threat Modeling
+*page.425*
+
+![[Software Engineering-image-20250720 4.png]](https://wentzwu.com/2021/06/02/attacks-and-threat-modeling/)
+
+Nice Tool
+- Microsoft Threat Modeling Tool
+
+### Threat Categorization - STRIDE
+
+由微軟所開發
+![[Software Engineering-image-20250720 5.png]]
+A threat modeling methodology that categorizes threats based on six aspects: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege.
+
+## Threat Analysis - DREAD
+
+由微軟所開發，以==技術觀點==為導向的工具
+![[Software Engineering-image-20250720 6.png]]
+
+Wuson Conclusion: 參考，不要用，不是資安人員的角色，而是應該由RD來建模
