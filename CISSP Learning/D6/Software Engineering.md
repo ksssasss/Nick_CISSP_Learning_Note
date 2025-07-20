@@ -92,8 +92,18 @@ Proprietary
 *page.437*
 
 Class & Object
-- Attributes --> Properties
-- Operations --> Methods
+- Attributes --> Properties 屬性
+- Operations --> Methods 方法
+
+```Example:
+class Car:
+    def __init__(self, color, brand):
+        self.color = color      # 屬性
+        self.brand = brand      # 屬性
+
+    def drive(self):            # 方法
+        print(f"{self.brand} 正在行駛")
+```
 
 OOP Features
 - 封裝(Encapsulation):
@@ -113,5 +123,33 @@ Principles:
 ## Testing Phase
 
 Code Module <-- pair with --> Unit Test
+```Example
+# production Code Module
+def add(a, b):
+    return a + b
 
+# 對應的 Unit Test
+def test_add():
+    result = add(2, 3)
+    assert result == 5
+```
 
+### Software Testing Techniques
+*page.442*
+
+- Unit Testing
+- Code Review
+	- Pair Programming
+	- Code Scanners
+	- Fagan Inspection
+- Integration Testing
+	- Regression Testing
+	- Interface testing (API & UI) --> 供 Module 之間互動
+	- Fuzz Testing
+- System Testing
+	- Stress Testing
+	- Security Testing
+- Misure Case Testing
+- User Acceptance Testing (UAT)
+- Installation Testing
+- Synthetic Transactions
