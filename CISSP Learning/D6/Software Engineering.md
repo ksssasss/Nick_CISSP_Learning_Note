@@ -159,4 +159,12 @@ def test_add():
 - User Acceptance Testing (UAT)
 	>驗收測試
 - Installation Testing
-- Synthetic Transactions
+- Synthetic Transactions 合成(人工)交易
+	>Example: 交易系統下單測試
+
+### Types of Testing
+![[Software Engineering-image-20250720 3.png]]
+Positive vs Negative Testing
+- Valid vs invalid inputs
+
+
