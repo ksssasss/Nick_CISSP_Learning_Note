@@ -138,18 +138,25 @@ def test_add():
 *page.442*
 
 - Unit Testing
-- Code Review
-	- Pair Programming
+	- 核心概念: 用程式去測試程式
+	- Unit Testing first, then Coding
+- Code Review --> 人來看、機器看、專家看
+	- Pair Programming:
+		>結對編程，給夥伴看
 	- Code Scanners
-	- Fagan Inspection
+		> Example: 源碼檢測軟體
+	- Fagan Inspection:
+		>一種結構化的同行審查過程，在開發過程中檢查和審查設計文檔、源代碼以及其他軟件相關文檔是否有缺陷，較不適合自動化
 - Integration Testing
 	- Regression Testing
 	- Interface testing (API & UI) --> 供 Module 之間互動
-	- Fuzz Testing
+	- Fuzz Testing 模糊測試
 - System Testing
 	- Stress Testing
 	- Security Testing
 - Misure Case Testing
+	>誤用案例通常會踩攻擊方觀點
 - User Acceptance Testing (UAT)
+	>驗收測試
 - Installation Testing
 - Synthetic Transactions
