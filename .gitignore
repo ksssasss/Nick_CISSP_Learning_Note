@@ -1,3 +1,16 @@
+# 忽略所有檔案和資料夾
+*
+
+# 但追蹤 CISSP Learning 資料夾
+!CISSP Learning/
+!CISSP Learning/**
+
+# 追蹤 .gitignore 檔案本身
+!.gitignore
+
+# 追蹤 README 檔案
+!README.md
+
 # Obsidian 系統檔案
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
