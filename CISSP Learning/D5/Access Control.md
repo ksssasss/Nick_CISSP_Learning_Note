@@ -1,12 +1,21 @@
 # Access Control
 Identity and Access Management(I+3A)
-
+page.306
 ## What is **==Access Control==**?
 
-存取及使用，存取就是資源的使用, page.306
+存取(Access)即使用（資源），是主體使用客體的行為
+而存取控制(Access Control)即 存取行為的管制
 
-Identity, 了解身份
-主體使用客體
+### 核心主題
+
+1. 情境(Contexts)
+2. 身分與存取管理(Identity and Access Management,IAM) --> ==I + 3A==
+	- I: 身份 Identity
+	- 3A: 
+		1. 驗證身份, Authentication
+		2. 檢查授權, Authorization
+		3. 紀錄行為, Account to
+3. Zero-trsut
 
 ---
 
@@ -25,6 +34,7 @@ no more mo less 原則
 ## Contexts of Access Control
 pag.309
 
+情境(Contexts)
 1. Logical access control
 2. Network access control
 3. Remote access control

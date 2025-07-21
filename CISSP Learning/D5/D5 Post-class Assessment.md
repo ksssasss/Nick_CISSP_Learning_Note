@@ -4,8 +4,13 @@
 1.1 何謂存取控制(access control)？
 Answer：
 
+存取(Access)即使用（資源），是主體使用客體的行為
+而存取控制(Access Control)即 存取行為的管制
+
 1.2 存取控制要唸那三個主題？請簡述之。
 Answer：
+
+
 
 ---
 # 2. 存取控制的3A是指驗證身份(authentication)、檢查授權(authorization)與記錄行為(accounting)。這三個A各自要唸那些主題？
