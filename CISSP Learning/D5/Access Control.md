@@ -209,6 +209,7 @@ TGT理解 --> 買票、購票資格
 Authorization   權利, not 權限
 權限 --> 講事情
 
+CISSP的 Access Control 強調單指==授權==這動作，即授予==特權==
 Privileges = Permissions + Rights 權力
 
 Authorization Mechanisms
@@ -223,10 +224,16 @@ Authorization Mechanisms
 	Risk-based Access Control
 	Rule-based Access Control
 	History-based Access Control
-Security Models
+Security Models (BBCC)
 	Bell-LaPadula Models
+		- 禁止資料向「下」存取
 	Biba Models
+		- 禁止資料向「上」存取
 	Chinese Wall (Brewer-Nash)
+		- ==避免透過資料拼湊==的方式取得高階機密資料
+		- 設定利益衝突群組，透過存取紀錄來==動態阻斷==資料取得
+	Clark-Wilson Model
+		- 確保資料完整性
 
 ---
 
@@ -303,3 +310,6 @@ XACML --> 授權使用的協定
 資料流、控制流 --> 工程師語言
 資料不要外洩 --> 長官語言
 學者的語言 --> 剛廠商理解實作用
+
+---
+
