@@ -127,10 +127,46 @@ Answer：
 
 2. Operating System 作業系統
 	- NTLM
-		- 採用challenge & response驗證機制
-		- 安全性低已棄用，先今驗證改以Kerberos為主
+		- 採用 challenge & response 驗證機制
+		- 安全性低已棄用，先今驗證改以 Kerberos 為主
 	- Kerberos
-		- 
+		- 用於 AD 身份驗證協定，核心在於 Client, Server, KDC(Key Distribution Center, 金鑰配發中心) 之間的互動驗證機制
+		- Kerberos 協定中使用到的金鑰：
+			- $K_C$ (Client Secret Key)：由 Client 密碼單向雜湊 (Hash) 而成，只有 Client 和 KDC 知道
+			- $K_{TGS}$ (TGS Secret Key)：只有 KDC 的 AS 和 TGS 知道的秘密金鑰
+			- $K_S$ (Service Secret Key)：只有 KDC 和特定的 Service Server 知道的秘密金鑰
+		- 核心流程：
+			- Step 1:
+				1. Client 向 KDC AS(Authentication Server) 請求 TGT(Ticket-Granting-Ticket)
+				2. Client 向 KDC TGS(Ticket-Granting Server) 請求 TGT
+			- Step 2:
+				- Client 向 SS(Service Server) 請求服務
+		- 驗證細節：
+			- Step 1: AS-REQ
+				- Client 向 KDC 發送明文請求身份驗證(當中包含使用 $K_C$ 加密的當前 Timestamp)
+			- Step 2: AS-REP
+				- Client 向 KDC 發送明文請求身份驗證(當中包含使用 $K_C$ 加密的當前 Timestamp)，KDC中的 AS(Authentication Server) 會向資料庫確認使用者存取權限，並找到對應 Client 的 $K_C$ ， 解密 Client 請求並得到相應的 Timestamp 即初步驗證成功，並回覆 AS-REP
+					- A message : 使用 $K_C$ 加密，內含 Client/TGS Session Key、TGS ID、Lifetime、Timestamp
+					- B message(即 TGT): 使用 $K_{TGS}$ 加密，內含 Client/TGS Session Key(和A訊息中的是同一把)、Client ID、Client IP、Lifetime、Timestamp
+				- Client 取得 AS-REP 後，會利用 $K_C$ 解密 A 訊息，取得 Client/TGS Session Key
+			- Step 3: TGS-REQ
+				- Client 向 TGS 發送服務請求，證明自己是 TGT 合法持有者
+					- C message(Authenticator): 使用 ${SK}_{C,TGS}$ (Client/TGS Session Key)來加密，內含 Client ID, Timestamp，C message 的用途是證明請求即時性，只有合法的 Client 才能從 AS-REP 解密出 ${SK}_{C,TGS}$
+					- D message : 明文傳送 TGT(也就是 Step 2 的 B message) 及 Client 要存取的 Server ID
+			- Step 4: TGS-REP
+				- TGS 使用自己的 $K_{TGS}$ 解密 TGT ，取得內含的 ${SK}_{C,TGS}$ 
+				- 再利用 ${SK}_{C,TGS}$ 解密 C message 後，驗證 TGT & C 中的 Client ID 是否一致、Timestamp 是否相應，如驗證通過 TGS 就會配發 ST(Server Ticket)
+					- E message(即 ST) : 使用目標 Service 的 $K_S$ 加密，內含 ${SK}_{C,S}$ (Client/Service Session Key，新的隨機會話金鑰，用於最後 Client 與 Service 的通訊)、Client ID、Client IP、Lifetime、Timestamp
+					- F message : 使用 ${SK}_{C,TGS}$ 加密，內含 ${SK}_{C,S}$ (和 E message 是同一把)
+				- Client 取得 TGS-REP 後，會利用之前儲存的 ${SK}_{C,TGS}$ 解密訊息 F 來取得 ${SK}_{C,S}$ ，訊息 E 暫存
+			- Step 5: AP-REQ
+				- Client 拿 ST 向服務伺服器請求服務
+					- 新的 Authenticator 並使用 ${SK}_{C,S}$ 加密，內含 Client ID、Timestamp
+					- ST，即剛剛 TGS-REP 收到所暫存的 E message
+			- Step 6: AP-REP
+				- SS 收到請求後，會使用自己的 $K_S$ 解密 ST 並取得 ${SK}_{C,S}$ 
+				- 利用 ${SK}_{C,S}$ 去解密 AP-REQ 的 Authenticator，並驗證其內文中的 Client ID、Timestamp 是否與 ST 中的訊息一致
+				- 驗證通過後，確認 Client 身份 SS 便會開始提供服務，後續 Client & SS 間的繪話都可以使用 ${SK}_{C,S}$ 實施加密來確保會話安全
 
 3. Application 應用程式
 	- LDAP & X.500
