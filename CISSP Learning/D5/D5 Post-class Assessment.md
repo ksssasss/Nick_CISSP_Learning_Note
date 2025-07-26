@@ -203,10 +203,12 @@ Answer：
 ---
 # 8. 請說明政策(Policy)、安全模型(Security Models)舆安全機制(Mechanisms)的關係？準備考試至少要唸到那四個安全模型？
 
-8.1 請說明政策(Policy)、安全模型(Security Models)舆安全機制(Mechanisms)的關係？
+8.1 請說明政策(Policy)、安全模型(Security Models)與安全機制(Mechanisms)的關係？
 Answer：
 
-資訊安全管理應從高層的政策出發，經由安全模型將政策具體化，最後透過安全機制落實於系統與流程，三者層層對應、密切相連，可以確保組織資訊安全的系統性與有效性。
+- 政策(policy)是經營高層管理意圖的展現
+- 安全模型(Security)即是將政策轉化回具體框架的解決方案
+- 安全機制(Mechanisms)是實踐安全模型的具體技術＆程序或是工具
 
 8.2 準備考試至少要唸到那四個安全模型？
 Answer：
