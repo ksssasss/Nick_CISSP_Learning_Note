@@ -313,3 +313,14 @@ XACML --> 授權使用的協定
 
 ---
 
+### **SAML vs. OIDC：CISSP 觀點的快速比較**
+
+| **特性**   | **SAML (Security Assertion Markup Language)** | **OIDC (OpenID Connect)**        |
+| -------- | --------------------------------------------- | -------------------------------- |
+| **底層技術** | XML, SOAP, XML Signature                      | JSON, REST, JWT (JSON Web Token) |
+| **複雜度**  | 較為繁重，設定複雜，XML 解析耗能                            | 較為輕量，API 友好，易於實作                 |
+| **主要用途** | 企業級 Web 應用程式 SSO                              | 消費級應用、行動應用、單頁應用 (SPA) 的 SSO      |
+| **成熟度**  | 非常成熟，廣泛應用於政府和大型企業                             | 較新，但已成為現代應用的主流標準                 |
+| **安全性**  | 依賴 XML 數位簽章和加密                                | 依賴 JWT 的簽章 (JWS) 和加密 (JWE)       |
+| **裝置支援** | 對行動裝置支援較差                                     | 原生為行動和 Web 設計                    |
+| **傳遞資訊** | SAML 斷言 (Assertion)                           | ID Token (JWT) 和 Access Token    |

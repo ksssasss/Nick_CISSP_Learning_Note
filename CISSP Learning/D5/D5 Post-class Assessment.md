@@ -70,9 +70,11 @@ Answer：
 Answer：
 
 主體(subject)
+- 通常指使用者，即試圖登入應用程式的個人
 客體(object)
 實體(entity)
 身份(identity)
+- 負責**驗證**使用者身份，並產生包含使用者資訊的「SAML 斷言 (Assertion)」。例如：企業的 Active Directory (ADFS), Okta, Azure AD
 信物(authenticator)
 身份驗證因子(authentication factor)
 
@@ -169,8 +171,20 @@ Answer：
 				- 驗證通過後，確認 Client 身份 SS 便會開始提供服務，後續 Client & SS 間的繪話都可以使用 ${SK}_{C,S}$ 實施加密來確保會話安全
 
 3. Application 應用程式
-	- LDAP & X.500
-	- SAML & OIDC
+	- X.500
+		- X.500 是一套 Directory Service standard(目錄服務標準)，他定義了一個階層式的樹狀結構，每一個物件都有一個全域中唯一的 DN(Distinguished Name)
+			- DN example : C=TW, O=MyCompany, OU=IT, CN=JohnDoe
+		- X.500 標準本身有包含一套存取目錄協定，稱為 DAP (Directory Access Protocol)，但由於太過笨重而被棄用
+	- LDAP (Lightweight Directory Access Protocol)
+		- 如其名，他是基於 X.500 標準大幅簡化了存取目錄的複雜度，所以又被稱為 X.500-Lite
+	- SAML (Security Assertion Markup Language)
+		- 基於XML標準，核心用於主體、IdP(Identity Provider 身份提供者)與 SP(Service Provider )服務提供者間的身份驗證，簡單的理解 IdP 會作為組織的「統一登入入口」，SP 本身不處理主體密碼，完全信任 idP 的驗證結果
+		- SAML 高度依賴 XML Signature 與加密，且SAML斷言必須經過簽章以防止竄改
+	- OIDC (OpenID Connect)
+		- OIDC 是建立在 OAuth 2.0 協定以上的現代化身份驗證層，OAuth 2.0 負責授權 (Authorization)， OIDC 則用於身份驗證 (Authentication)
+		- OIDC 採用更輕量的 JSON Web Tokens (JWT) 來傳遞訊息，核心用於 End User、 RP(Replying Party)、OP(Open ID)間的身份驗證，RP 可以對照 SAML 的 SP，OP 可以對照 SAML 的 IdP
+		- 與  SAML 相比， SAML 是企業的身份驗證解決方案，而 OIDC 則是方便消費者層級的身份驗證運用，核心在於「提供身份」的角色，OP 就是通用身份的提供者
+
 
 ---
 # 7. 上課提到那些授權機制(authorization mechanisms)，請簡述之
@@ -192,13 +206,25 @@ Answer：
 8.1 請說明政策(Policy)、安全模型(Security Models)舆安全機制(Mechanisms)的關係？
 Answer：
 
+資訊安全管理應從高層的政策出發，經由安全模型將政策具體化，最後透過安全機制落實於系統與流程，三者層層對應、密切相連，可以確保組織資訊安全的系統性與有效性。
+
 8.2 準備考試至少要唸到那四個安全模型？
 Answer：
+
+考試準備 Security Models 安全模型至少要唸到四個重點模型： BBCC
+	- Bell-LaPadula Models 
+	- Biba Models
+	- Chinese Wall (Brewer-Nash)
+	- Clark-Wilson Model
 
 ---
 # 9. 根據上課的說法，何謂零信任(zero trust)？
 
 9.1 根據上課的說法，何謂零信任(zero trust)？
 Answer：
+
+零信任(Zero-Trust)：可稱為 Access Control 2.0
+- 與傳統以網路為中心的架構不同，Zero-Trust 以資料為中心(Data-Centric)，並劃定虛擬邊界(Virtual Perimeter)
+- Zero-Trust 把 Authentication(身份驗證)＆ Authorization(檢查授權)作到更細膩(Fine-grained)、更動態(Dynamic)、更透明(Transparent)
 
 ---
