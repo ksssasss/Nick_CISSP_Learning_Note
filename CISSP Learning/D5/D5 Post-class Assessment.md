@@ -69,14 +69,19 @@ Answer：
 3.1 請說明何謂主體(subject)、客體(object)、實體(entity)、身份(identity)、信物(authenticator)及身份驗證因子(authentication factor)
 Answer：
 
-主體(subject)
-- 通常指使用者，即試圖登入應用程式的個人
-客體(object)
-實體(entity)
-身份(identity)
-- 負責**驗證**使用者身份，並產生包含使用者資訊的「SAML 斷言 (Assertion)」。例如：企業的 Active Directory (ADFS), Okta, Azure AD
-信物(authenticator)
-身份驗證因子(authentication factor)
+主體(subject)：
+- 可以理解為主動方
+客體(object)：
+- 可以理解為被動方（被使用資源的一方）
+實體(entity)：
+- 指實際存在且可以唯一識別的個體，通常具有多個屬性與身份
+身份(identity)：
+- 是用來唯一識別(uniquely identity)一個實體(entity)的屬性(attribute)
+信物(authenticator)：
+- 是指用來證明身份的物品，like: Password
+身份驗證因子(authentication factor)：
+- 因子即是組成元素
+- 身份驗證因子 即 身份驗證過程所需要的組成元素，like password, 信物
 
 ---
 # 4. 請說明何謂帳號(account)、儲存體(repository) 、資料庫(database)  、目錄(directory)及服務(service)
@@ -84,10 +89,16 @@ Answer：
 4.1 請說明何謂帳號(account)、儲存體(repository) 、資料庫(database)  、目錄(directory)及服務(service)
 Answer：
 
-帳號(account)
+帳號(account)：
+- 是為了方便管理實體的技術手段
 儲存體(repository) 
-資料庫(database)  目錄(directory)
-服務(service)
+- 是一個通用資料的儲存空間容器
+資料庫(database)  
+- 是一個具備結構化性質的資料儲存空間容器
+目錄(directory)
+- 即是存放帳戶資料的資料庫
+服務(service)：
+- 即程式，提供特定功能的應用程式或處理程序，like管理目錄的程式就叫目錄服務
 
 ---
 # 5. 請列出講義所提到的生物特徵(biometric)？為何生物特徵不適合用在單因子驗證？
@@ -95,8 +106,25 @@ Answer：
 5.1 請列出講義所提到的生物特徵(biometric)？
 Answer：
 
+實體 Physiological
+- 指紋
+- 手指靜脈
+- 掌紋
+- 虹膜
+- 視網膜
+- 臉部特徵
+動態 Behavioral
+- 聲音特徵 Voice Dynamics
+- 簽名特徵 Signature Dynamics
+- 鍵盤習慣特徵 Keystroke Dynamics
+生物 Biological
+- DNA
+- Blood Glucose
+
 5.2 為何生物特徵不適合用在單因子驗證？
 Answer：
+
+生物特徵無法變更，一旦遭到竊取就能直接使用，甚至在 NIST (SP 800-63B) 中直接禁止生物特徵在單因子驗證情境下使用
 
 ---
 # 6. 身份驗證(authentication)的步驟為何？ 請從網路、作業系統及應用程式的角度重點說明身份驗證協議(protocols)

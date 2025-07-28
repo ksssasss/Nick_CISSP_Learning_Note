@@ -164,3 +164,70 @@ flag:
 - RST, Reset
 
 傳輸前、中、後 都必須經過控制
+
+port number 就是程式的號碼
+example: 80 port --> web server 的程式號碼
+
+windows server = linux demand
+
+DNS port number 用了 TCP 53 port 也用了 UDP 53 port for DNS query
+為什麼要用 UDP? 資料量太大，對 DNS Record 負擔太大
+TCP 用於 DNS Record 資料的互相備份複製 --> Zone Transfer
+
+DNS 儲存的資料叫做 Zone file
+
+SIEM Log 收容為什麼走 UDP --> 也是因為量大
+
+---
+### Session Layer
+*page.515*
+什麼是 Session？
+Session 就是一段時間 --> 一段時間的會話
+" Session " is a period devoted to a particular activity.
+Wuson課程定義(狹義)：登入到登出的那一段時間
+登入就會有身份驗證
+身份驗證就會取得 token
+token 就是一種 狀態 State 管理的機制
+在看到單工、雙工議題，會話的單向還是雙向
+
+- Token Management
+- State Management 
+- Interaction Management
+- Protocols
+
+---
+### Application Layer
+*page.517*
+
+留意下各 Protocol 的用途是什麼，配套軟體是什麼
+https標準指令
+- get 查詢
+- post 新增
+- push 修改
+- delete 刪除
+
+DNSSEC --> 保護DNS --> 要看
+TCP安全性：目前 TLS 版本至少要 1.2 (SSL以棄置)
+
+TLS 安全參數的調整 --> Cipher suites
+*page.299*
+
+---
+### IPsec
+*page.502*
+
+IPsec 可以幹嘛？ 提供「安全服務」
+提供什麼安全服務？(IPsec - v3)
+- 給看不給改，強化完整性 --> AH
+- 不給看也不給改，完整性、機密性均強化 --> ESP
+
+AH --> hash
+ESP --> 加密，所以要有配套的金鑰協議 --> IKEv2
+
+安全服務有試用範圍，範圍有半套、全套
+*page.503*
+- 半套的 Tunnel Mode
+- 全套的 Transport Mode
+
+不管你選擇 AH、ESP，均可選擇 Tunnel Mode or Transport Mode
+*page.504*
