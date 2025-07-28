@@ -4,20 +4,36 @@
 1.1 何謂工程(engineering)？
 Answer：
 
+工程的本質：做東西
 
 1.2 工程要唸那些議題？
 Answer：
 
+掌握核心觀念：時時都安全、處處都安全
+Introduction
+- Approches
+- Security Models
+- Cryptology
+Specific Topic
+- Data Center
+- Network
+- Software
+
 1.3  作好一個工程案至少要具備那二項最基本能力？
 Answer：
+
+1. 本職學能硬功夫
+2. 專案管理軟實力
 
 1.4 何謂專案(project)？
 Answer：
 
+有開始、有結束、有產出，產出必須在範圍內、時間內及成本內，並兼顧品質的一件事
+
 1.5 工程與專案有何關係？
 Answer：
 
-
+所有「工程」都是透過「專案」的形式來執行
 
 ---
 # 2. 何謂系統(system)、資訊系統(information system) 與管理系統(management system)？
