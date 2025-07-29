@@ -79,12 +79,14 @@
 
 ## 7.12 - Test Disaster Recovery Plans (DRP)
 
-- Read-through/tabletop
-- Walkthrough
-- Simulation
-- Parallel
-- Full interruption
-- Communications (e.g., stakeholders, test status, regulators)
+- ==Read-through/tabletop==
+- ==Walkthrough==
+- ==Simulation==
+- ==Parallel==
+- ==Full interruption==
+- ==Communications (e.g., stakeholders, test status, regulators)==
+
+背起來(還有定義),OSG的流程也要死記起來, Kuro筆記Day 2, BC 可以參考
 
 ## 7.13 - Participate in Business Continuity (BC) planning and exercises
 
@@ -92,6 +94,8 @@
 
 - Perimeter security controls
 - Internal security controls
+
+CPTED要非常清楚，睡覺都要夢到 by Kuro
 
 ## 7.15 - Address personnel safety and security concerns
 
