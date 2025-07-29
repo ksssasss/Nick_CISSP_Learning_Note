@@ -100,7 +100,9 @@ A：資料的可用信
 9. Objectives (目標) --> 未來狀態的具題描述
 10. 資訊安全最重要的資產 --> 「資訊」
 11. What is "System"?  You can understand it using the concept of a forest.
-	 系統是一個總成 --> 元素 + 目的
+	 系統是指為了達成特定目的而一起協同運作的一群元素的統稱
+	 是一個總成 --> 元素 + 目的
+ 12. 資訊系統是指將資料(data)進行處理，並轉換為有用的資訊(information)的系統
 
  ```tree
  System

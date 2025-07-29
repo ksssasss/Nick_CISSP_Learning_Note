@@ -2,7 +2,7 @@
 ISO OSI Reference Model, TCP/IP, and IEEE 802, *page.453*
 
 
-網路是一種系統，
+網路是一種系統
 - 組成元素：由傳輸媒介(transport media) 與節點(node) 組成
 - 存在目的：目的在於傳輸訊息、共享資源
 
@@ -17,7 +17,7 @@ ISO OSI Reference Model, TCP/IP, and IEEE 802, *page.453*
 這邊指的「架網路」，指的是 LAN
 
 Connections
-- Links : 直連沒有穿插 Node
+- Links 鏈結 : 直連沒有穿插 Node
 - route (Path) : 中間有走過 Node
 - P2P, Point-to-Point, 中間的線(傳輸媒介)就是 Link
 - E2E, End-to-End, 中間的傳輸媒介就是 Route(Paht)
@@ -187,8 +187,8 @@ Session 就是一段時間 --> 一段時間的會話
 Wuson課程定義(狹義)：登入到登出的那一段時間
 登入就會有身份驗證
 身份驗證就會取得 token
-token 就是一種 狀態 State 管理的機制
-在看到單工、雙工議題，會話的單向還是雙向
+token 就是一種 狀態(State) 管理的機制
+再看到單工、雙工議題，會話的單向還是雙向
 
 - Token Management
 - State Management 
