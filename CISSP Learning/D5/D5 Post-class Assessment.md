@@ -30,6 +30,22 @@ Answer：
 	- 更動態 Dynamic
 	- 更透明 Transparent
 
+```Wuson
+
+以下補充:
+• 存取控制是指【主體使用客體的行為必須受到3A的管制】。
+
+因為存取控制有不同情境，【安全核心】只適用邏輯存取控制(電腦系統), 因此我們很早就不強調由安全核心來進行3A管制，這個是我們課程很早期的說法。參考教練筆記還是要重心放在我們最近的上課內容喔!
+• 存取控制要唸情境(context)、內涵(I+3A)及零信任(Zero Trust)這三個主題。
+
+情境：Logical Access Control, Network Access Control, Remote Access Control, Physical Access Control, Perimeter Access Control, Media Access Control.
+
+內涵：I+3A 。內涵是指實際的控制動作，主要是3A (Authentication, Authorization, Accounting)。要驗證身份(Authentication)必須先有身份(Identity)，所以口訣變成I+3A。
+
+零信任：以資料為中心，畫定虛擬邊界，形成獨立的安全區域，進行更細膩(細顆粒)、更動態、更透明的存取控制。
+
+```
+
 ---
 # 2. 存取控制的3A是指驗證身份(authentication)、檢查授權(authorization)與記錄行為(accounting)。這三個A各自要唸那些主題？
 
@@ -100,6 +116,13 @@ Answer：
 服務(service)：
 - 即程式，提供特定功能的應用程式或處理程序，like管理目錄的程式就叫目錄服務
 
+```Wuson
+
+• 服務(service): 服務即程式，但必須是有API的程式。亦即透過API來提供功能給其它程式使用的程式。
+• 英文的Account其實應該要翻譯成【帳戶】，但我們實務上常把Account說成是帳號。嚴格來說，【帳號】的英文應該是Account Number，它只能算是【帳戶】的一個欄位而已。例如：【銀行帳號】及【銀行帳戶】；銀行帳號只是銀行帳戶的一個欄位，而銀行帳戶有名字、帳號、餘額等欄位。因此，如果我們口中的【帳號】是指Account Number，那把帳號解釋成身份就沒有問題。但如果帳號是指Account (帳戶)，那我們就不能說是帳號是身份，此時的帳號就成為【代表實體的技術手段】了。
+
+```
+
 ---
 # 5. 請列出講義所提到的生物特徵(biometric)？為何生物特徵不適合用在單因子驗證？
 
@@ -126,6 +149,12 @@ Answer：
 
 生物特徵無法變更，一旦遭到竊取就能直接使用，甚至在 NIST (SP 800-63B) 中直接禁止生物特徵在單因子驗證情境下使用
 
+```Wuson
+
+• 秘密性及恆定性。除了視網膜以外的生物特徵多半秘密性不足，而且不易改變。
+
+```
+
 ---
 # 6. 身份驗證(authentication)的步驟為何？ 請從網路、作業系統及應用程式的角度重點說明身份驗證協議(protocols)
 
@@ -136,6 +165,12 @@ Answer：
 - Identification 出示身份
 - Verification 檢查身份 
 - Notification 檢查結果
+
+```Wuson
+
+• 身份驗證(authentication)的步驟：出示身份、檢查身份、通知結果。
+
+```
 
 6.2 請從網路、作業系統及應用程式的角度重點說明身份驗證協議(protocols)
 Answer：
@@ -247,6 +282,15 @@ Answer：
 	- Chinese Wall (Brewer-Nash)
 	- Clark-Wilson Model
 
+```Wuson
+
+以下補充:
+• 政策(Policy)、安全模型(Security Models)舆安全機制(Mechanisms)代表產官學界的合作。政策代表政府機構的制度(用英文寫)、安全模型代表學者對政策的研究成果及學術理論(用數學表達)，而安全機制代表產業依安全模型實作的解決方案(用電腦語言實作)。
+• 管理制度(management system)要有資訊系統(information system)來輔助，以提升效能。資訊系統的設計最好也有學術理論的基礎；用數學表現的模型稱為正式模型(formal model)，用數學表現的設計則稱為正式設計(formal design)。
+• 美國國防部的保密制度須要有可信賴的電腦系統(TCS, trusted computer system)來輔助；美國國防部發布可信賴電腦系統的評估準則(TCSEC)作為檢測電腦系統的標準，以作為採購的依據。TCSEC是依據BLP等安全模型所發展。
+
+```
+
 ---
 # 9. 根據上課的說法，何謂零信任(zero trust)？
 
@@ -256,5 +300,17 @@ Answer：
 零信任(Zero-Trust)：可稱為 Access Control 2.0
 - 與傳統以網路為中心的架構不同，Zero-Trust 以資料為中心(Data-Centric)，並劃定虛擬邊界(Virtual Perimeter)
 - Zero-Trust 把 Authentication(身份驗證)＆ Authorization(檢查授權)作到更細膩(Fine-grained)、更動態(Dynamic)、更透明(Transparent)
+
+```Wuson
+
+以下補充:
+• 零信任(zero trust)是Access Control 2.0, 也就是以資料為中心，畫定虛擬邊界，形成獨立的安全區域(Security Domain)，進行更細膩、更動態、更透明的存取控制。
+
+那什麼是Access Control 1.0呢? Access Control 1.0的主要內涵是強調【主體(Subject)使用客體(Object)的行為必須受到3A的管制】。這邊的3A是指驗證身份(Authentication)、檢查授權(Authorization)與記錄行為(Accounting)。
+• 零信任的主要的重點不是【把3A升級再優化】，也就是把3A作到【更細膩(細顆粒)、更動態、更透明】而已，因為這只是【次要】的重點。零信任最主要、最重要的重點或改變，在於放棄以網路位置為中心的繼承式信任(inherent trust)，改成在【以資料為中心，畫定虛擬邊界】所形成的安全區域(security domain)，進行【更細膩(細顆粒)、更動態、更透明】的存取控制。這種強調以零為基礎(zero-based)、經過層層驗證所累積而來的信任才是零信任的核心精神！
+• 簡單的說，【從零開始累積信任】是Zero Trust的【目的】，而【更細膩(細顆粒)、更動態、更透明的存取控制】則是Zero Trust達成從零開始累積信任這個目的的【手段】。有人（含CISSP考試大綱）說Zero Trust是Trust but verify！我覺得這真的是直指核心，是Zero Trust的最佳註解！。
+• 資安作到最後只剩下信心(confidence)與信任(trust)。針對人員、流程、產品與服務，以及組織，不斷的Verify and Validate (V&V, 內驗、外確)，才能建立信心與累積信任！擁有自信、口碑及公正的背書，才能消除疑慮、提升信心，達到保證(assurance)的效果！
+
+```
 
 ---

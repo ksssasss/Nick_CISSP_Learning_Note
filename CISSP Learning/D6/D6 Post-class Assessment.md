@@ -51,7 +51,21 @@ Answer：
 - 元素：管理(management)是達成目標的一套有系統的方法
 - 所以管理系統就是一套用於管理制度的系統
 
+```Wuson
 
+• 這個回答只有提到資訊系統的組成元素，而沒有提到資訊系統存在的目的。
+• 【系統 (system) 】是指為了達成特定【目的】而一起協調運作的【元素】總成；因此，系統的概念有二個重點：目的及元素。
+【結構(structure)】係指一個系統的組成元素以及元素之間的關係；結構可能是自然形成，亦或精心設計的結果。 
+【架構(architecture)】是一種結構，但架構強調【主要元素】及其關係，而且是係是【精心設計】的結果；例如：軟體結構、網路架構等。
+• 資訊系統也是一種系統，所以也要把資訊系統的【組成元素】及【存在目的】定義清楚。
+-- 資訊系統的【目的】是將資料(data)轉為資訊(information)的系統。
+-- 資訊系統的組成【元素】包含資料、電腦系統、作業系統、(應用)軟體、網路、資料中心、人員及業務流程等。
+
+```
+![[D6 Post-class Assessment-image-20250731.png]]
+```Wuson
+• 我們的課程用【孔雀】來比喻資訊系統，用孔雀的【八根毛】比喻資訊系統的八個組成元素。
+```
 
 ---
 # 3. 何謂有品質的好軟體(quality software)？請列出上課所介紹的軟體開發生命週期(SDLC)的【階段】及【每個階段的重點】。
@@ -136,6 +150,19 @@ Answer：
 2. Use case Diagram：圖像表示
 3. User Story：特定句型描述(Role, Goal, Benefit, Criteria)
 
+```Wuson
+
+• 三種需求表達工具 
+1. 需求規格：精準描述
+2. 使用案例(Use Case)：操作步驟
+3. 使用者故事(User Story)：文法句型(As a <role>, I want <something>)
+
+使用案例(Use Case)是以文本方式撰寫(Use Case Text)，之後可用使用案例圖(Use Case Diagram)來呈現高階觀點。
+
+User Story其實只是文法句型, 它主要的目標是讓使用者自己表達需求, 是一種工作責任反轉的作法. 以前的作法是靠專業的系統/商業分析師去了解User的需求, 但透過User Story, 使用者可以自己表達.
+
+```
+
 ---
 # 6. 何謂設計(design)、正式設計(formal design) 與架構(architecture) ？請簡述微軟威脅塑模(threat modeling)的重點。
 
@@ -162,6 +189,12 @@ Answer：
 4. 記錄與確認(Document & Validate)
 	- 確認安全控制措施的有效性(V&V
 不論是識別出可能風險、及風險處置後的殘餘風險，都要列在風險登記表
+
+```Wuson
+
+從ISO 31000來看, DREAD是用在風險分析, 不是用在風險識別。但微軟的threat modeling沒那麼講究.
+
+```
 
 
 ---
@@ -233,6 +266,13 @@ Answer：
 6. 使用者驗收測試(UAT, User Acceptance Testing)
 7. 安裝測試(Installation Testing)
 8. 綜合/合成交易(Synthetic Transactions)
+
+![[D6 Post-class Assessment-image-20250731 1.png]]
+```Wuson
+
+• 測試(testing)：測試人員(tester)驗證受測標的(software/system under test)之實際結果(actual output)是否符合預期結果(expected output)的過程；受測標的之實際結果符合預期結果即為測試通過，反之則為測試不通過。測試是品質管理與風險管理的手段之一，但不是唯一手段。
+
+```
 
 ---
 # 10.請簡述交付(delivery)與部署(deployment)的差別。
