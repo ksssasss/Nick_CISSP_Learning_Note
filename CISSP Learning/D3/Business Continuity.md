@@ -32,6 +32,3 @@ Standard by ISO 22301
 ---
 Continuity, Resilience, and Sustainability
 Asset Security --> Business Continuity --> Organization Resilience --> Global Sustainability
-
-test
-whether git 
