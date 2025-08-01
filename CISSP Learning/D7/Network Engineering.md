@@ -1,7 +1,6 @@
 # Network Engineering
 ISO OSI Reference Model, TCP/IP, and IEEE 802, *page.453*
 
-
 網路是一種系統
 - 組成元素：由傳輸媒介(transport media) 與節點(node) 組成
 - 存在目的：目的在於傳輸訊息、共享資源
@@ -231,3 +230,5 @@ ESP --> 加密，所以要有配套的金鑰協議 --> IKEv2
 
 不管你選擇 AH、ESP，均可選擇 Tunnel Mode or Transport Mode
 *page.504*
+
+where
