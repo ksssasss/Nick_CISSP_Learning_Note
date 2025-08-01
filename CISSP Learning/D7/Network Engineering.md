@@ -230,5 +230,3 @@ ESP --> 加密，所以要有配套的金鑰協議 --> IKEv2
 
 不管你選擇 AH、ESP，均可選擇 Tunnel Mode or Transport Mode
 *page.504*
-
-where
